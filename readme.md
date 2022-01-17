@@ -137,7 +137,8 @@ We use the same standard TUM GAID experiments as described e.g. in [this paper](
 
 ![gait-time-ellapsed](images/time-elapsed.jpg)
 
-The best performing model on the first experiment is `H3.6m-GRU-1` and on the second is `M+L-GRU-2`. The graphs bellow compares the performance of these models with already mentioned state of the art model [PFM](https://arxiv.org/abs/1601.06931) from F.M. Castro et al. The model `H3.6m-GRU-1` was trained only on the first experiment and on the second graph there is shown, how this model works on the validation set of the second experiment. As you can see, both models outperform PFM in the second experiment with a large margin. It means that these models are much more robust against clothing and time elapsed factors. 
+The best performing model on the first experiment is `H3.6m-GRU-1` and on the second is `M+L-GRU-2`. The graphs bellow compares the performance of these models with already mentioned state of the art model [PFM](https://arxiv.org/abs/1601.06931) from F.M. Castro et al. The model `H3.6m-GRU-1` was trained only on the first experiment and on the second graph there is shown, how this model works on the validation set of the second experiment. As you can see, both models outperform PFM in the second experiment with a 
+large margin. It means that these models are much more robust against clothing and time elapsed factors. 
 
 ![Gait-experiment-1](images/ex1.jpg)
 ![Gait-experiment-2](images/ex2.jpg)
@@ -155,3 +156,4 @@ net_gait = GaitNetwork(recurrent_unit = 'GRU', rnn_layers = 1)
 net_pose.restore('./Human3.6m.ckpt')
 net_gait.restore('./H3.6m-GRU-1.ckpt')
 ```
+khaled nabil
